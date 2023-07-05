@@ -1,0 +1,25 @@
+<h1 id="réparation-de-kindle">Réparation de Kindle</h1>
+<p>Ma liseuse est KC ! Euh, cassée ! J'aurais besoin de fieffés réparateurs de liseuses pour la réparer&nbsp;!</p>
+<p>Vous connaissez un peu de PHP, de JS et de CSS ? Mais vous êtes la personne qu'il me faut !</p>
+<p>Comme vous le voyez, son écran n'affiche plus rien. Laissez-moi vous expliquer comment elle fonctionnait avant la panne.</p>
+<p><img src="bug.png" alt="Kindle cassé" /></p>
+<h2 id="étape-1---php">Étape 1 - PHP</h2>
+<p>Par défaut, elle m'affichait une <a href="resultat/home.png">liste de couvertures de livres</a>.</p>
+<p>D'après le manuel technique, les livres sont récupérés depuis le tableau <code>$books</code> du fichier <em>books.php</em> 🤔 Et les images viennent du dossier images. Apparement, tout est en place, le problème doit être au moment de la récupération des données…</p>
+<p><details><br />
+<summary>Indice</summary></p>
+<p>Vous n'avez <em>jamais besoin d'écrire le titre des livres en dur</em>, ils existent déjà : l'objectif est de les récupérer automatiquement depuis le tableau, avec une itération.</p>
+<p></details></p>
+<h2 id="étape-2---php">Étape 2 - PHP</h2>
+<p>Je me souviens que quand je cliquais sur la couverture d'un livre, j'arrivais sur <a href="resultat/livre.png">un écran dédié</a>.</p>
+<p>Le manuel technique parle d'un paramètre GET, qui permettrait à la liseuse de savoir quel livre charger… Et ça dit que les livres sont stockés dans le dossier, euh, <code>livres/</code>, dans des fichiers du même nom que le titre de livre.</p>
+<h2 id="étape-3---js">Étape 3 - JS</h2>
+<p>Ah oui ! Un dernier truc. Sur la page d'accueil, je pouvais alterner entre deux modes d'affichage des livres :</p>
+<ul>
+<li>avec les couvertures (du coup c'est bon)</li>
+<li>avec une <a href="resultat/liste.png">liste détaillée</a></li>
+</ul>
+<p>Il suffisait que je clique sur «&nbsp;Changer de vue&nbsp;» en bas.</p>
+<hr />
+<p>Indice général : pour toutes les étapes, en plus de PHP et JS, vous devrez aussi utiliser CSS afin que ça ressemble le plus possible aux <a href="resultat/">résultats attendus</a> 🙏</p>
+<p>La <code>correction</code> est disponible sur la branche du même nom !</p>
